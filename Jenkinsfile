@@ -1,22 +1,18 @@
+
 pipeline {
-    agent {
-        label 'node-1'
-    }
-    stages {
-        stage('Build') {
+    agent any
+        stages {
+            stage ('Build')
             steps {
-                sh 'echo this is Build'
+                sh "echo this is Build"
             }
-        }
-        stage('Test') {
+            stage ('Test')
             steps {
-                sh 'echo this is Test'
+                sh "echo this is Test"
             }
-        }
-        stage('Deploy') {
+            stage ('Deploy')
             steps {
-                sh 'echo this is Deploy'
+                sh "echo this is Deploy"
             }
-        }
-    }
+        }  
 }
